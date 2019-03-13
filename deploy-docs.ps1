@@ -2,7 +2,9 @@
 Write-Host "Deploying Docs to GitHub"
 git config --global credential.helper store
 Add-Content "$env:USERPROFILE.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
+
 git config --global user.name "Lachee"
+git config --global user.email "$($env:access_email)"
 
 git clone "https://github.com/Lachee/File-Search.git" docs
 
